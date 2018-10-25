@@ -1,0 +1,295 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "u. f. c. gym",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "Check_Schedule",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DayOfWeek",
+                            "samples": [
+                                "{date} please",
+                                "on {date}",
+                                "{date}"
+                            ]
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "class",
+                            "type": "Class_Name",
+                            "samples": [
+                                "{class} please",
+                                "{class} class",
+                                "{class}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{class} schedule on {date}",
+                        "class schedule",
+                        "check class schedule",
+                        "check schedule",
+                        "show me {date} schedule",
+                        "check {class} schedule on {date} before {time}",
+                        "check {class} schedule on {date} after {time}",
+                        "what classes are there on {date}",
+                        "show me the class schedule on {date}",
+                        "give me the class schedule on {date}",
+                        "what is the class schedule {date}",
+                        "check {class} class schedule on {date}",
+                        "check {class} schedule on {date}",
+                        "check {class} class time on {date}"
+                    ]
+                },
+                {
+                    "name": "Check_Hours",
+                    "slots": [],
+                    "samples": [
+                        "check open hours",
+                        "check hours",
+                        "what time do you close",
+                        "what time are you open"
+                    ]
+                },
+                {
+                    "name": "Book_Class",
+                    "slots": [
+                        {
+                            "name": "class",
+                            "type": "Class_Name"
+                        }
+                    ],
+                    "samples": [
+                        "sign up a {class} class",
+                        "book a {class} class",
+                        "register class",
+                        "sign up class",
+                        "reserve class",
+                        "book classes",
+                        "book class",
+                        "book a class"
+                    ]
+                },
+                {
+                    "name": "Check_Discount",
+                    "slots": [],
+                    "samples": [
+                        "any deals",
+                        "deals",
+                        "any discount",
+                        "discount",
+                        "check discount",
+                        "what discount do you have"
+                    ]
+                },
+                {
+                    "name": "AMAZON.SearchAction<object@LocalBusiness[openHours.closes]>",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.SearchAction<object@LocalBusiness[telephone]>",
+                    "samples": []
+                },
+                {
+                    "name": "List_Class",
+                    "slots": [
+                        {
+                            "name": "class",
+                            "type": "Class_Name"
+                        }
+                    ],
+                    "samples": [
+                        "list classes",
+                        "show me your classes",
+                        "do you have {class} class",
+                        "what classes do you have",
+                        "what class do you have"
+                    ]
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "Test",
+                    "slots": [
+                        {
+                            "name": "test_type",
+                            "type": "Test"
+                        }
+                    ],
+                    "samples": [
+                        "test",
+                        "test {test_type}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Class_Name",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "yoga"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cycling"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "boxing",
+                                "synonyms": [
+                                    "kick",
+                                    "kick boxing",
+                                    "kickboxing"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jiu jitsu",
+                                "synonyms": [
+                                    "Brazilian jiu jitsu"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Test",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "display"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "Check_Schedule",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DayOfWeek",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.774797172677.53360684876"
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "class",
+                            "type": "Class_Name",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.774797172677.605501859414"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.774797172677.53360684876",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What day of the week?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.774797172677.605501859414",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What class?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What class are you looking for?"
+                    }
+                ]
+            }
+        ]
+    }
+}

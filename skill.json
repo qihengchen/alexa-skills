@@ -1,0 +1,59 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "UFC Gym personal assistant.",
+          "examplePhrases": [
+            "Alexa, ask UFC gym for boxing class schedule today"
+          ],
+          "keywords": [],
+          "name": "UFC Gym",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/6b91/ef174a77f961443cb296586a64b09ddf/APP_ICON?versionId=O8ts5_UDP.fO2rUKiMjVN20_pC90Lwnk&AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&Expires=1538430146&Signature=lmi3C3OoVBGQuMb%2BPCYtaolS6ZQ%3D",
+          "description": "Check class schedule. Book class. Set workout remainder. Get personalized recipes and in-home workout tips.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/1c66/2c5a35bd65404f05bad0f985a8b892e7/APP_ICON_LARGE?versionId=iZEGHZsVhshdzUGZUB.3_Hu0rF7zv9NM&AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&Expires=1538430146&Signature=OO8ouhBmR5ablwLNE79IXoaD4JE%3D"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Test",
+      "category": "HEALTH_AND_FITNESS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "./lambda/us-east-1_gym"
+        },
+        "interfaces": [
+          {
+            "type": "RENDER_TEMPLATE"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa:devices:all:address:country_and_postal_code:read"
+      },
+      {
+        "name": "alexa::profile:name:read"
+      },
+      {
+        "name": "payments:autopay_consent"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": true,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "http://qihengchen.github.io"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": true
+    }
+  }
+}

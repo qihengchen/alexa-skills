@@ -1,0 +1,40 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.137b19c0-966c-4618-b0f4-efc56f106da3",
+      "was_cloned": false,
+      "resources": {
+        "manifest": {
+          "eTag": "b447a751bbe62cdc5515f1f53fc85d63"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "58490e07b49a199772616d47449139be"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-east-1:656436810617:function:gym",
+            "awsRegion": "us-east-1",
+            "functionName": "arn:aws:lambda:us-east-1:656436810617:function:gym",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "5f789ab6-2b3c-4857-b896-c0148fd84de8"
+          }
+        ]
+      },
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "arn:aws:lambda:us-east-1:656436810617:function:gym"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
